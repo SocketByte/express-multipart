@@ -13,6 +13,18 @@ High performance lightweight Express middleware for handling `multipart/form-dat
 
 ## Quick Start
 
+### npm
+
+```
+npm install express-multipart
+```
+
+### yarn
+
+```
+yarn add express-multipart
+```
+
 ```typescript
 import express from "express";
 import multipart from "express-multipart";
