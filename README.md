@@ -25,6 +25,8 @@ npm install express-multipart
 yarn add express-multipart
 ```
 
+## Code example
+
 ```typescript
 import express from "express";
 import multipart from "express-multipart";
