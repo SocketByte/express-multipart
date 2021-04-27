@@ -92,7 +92,7 @@
 					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>encoding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extension<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:28</li>
+							<li>Defined in index.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -100,24 +100,59 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
 								<h5>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Path to the storage directory.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>encoding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>File encoding.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>extension<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>File extension.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Mime type (based on the file extension).</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Name of the file that was persisted on a disk.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>original<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Name of the file that was received in the form-data request.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Full path to the persisted file.</p>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -128,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>Middleware<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:22</li>
+							<li>Defined in index.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -162,10 +197,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="multipartoptions" class="tsd-anchor"></a>
 					<h3>Multipart<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>acceptedTypes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>destination<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>maxFieldNameSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxFieldSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>onInvalidMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NodeJS.ReadableStream</span>, contentMime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, binaryMime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>preserveExtensions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>verifyMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>acceptedTypes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>destination<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>fileName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>maxFieldNameSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxFieldSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>onInvalidMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NodeJS.ReadableStream</span>, contentMime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, binaryMime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>preserveExtensions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>verifyMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:38</li>
+							<li>Defined in index.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -188,6 +223,36 @@
 									</div>
 									<p><em>Default: ./</em></p>
 								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> file<wbr>Name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The result of this function will work as a new file name persisted on a disk.</p>
+									</div>
+									<p><em>Default: random hex string</em></p>
+								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>originalName: <span class="tsd-signature-type">string</span></h5>
+													</li>
+													<li>
+														<h5>mime: <span class="tsd-signature-type">string</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Field<wbr>Name<wbr>Size<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
@@ -289,7 +354,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in index.ts:364</li>
+									<li>Defined in index.ts:410</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

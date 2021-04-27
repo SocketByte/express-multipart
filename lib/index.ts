@@ -9,11 +9,18 @@ import FileType from "file-type";
 import appendField from "append-field";
 import path from "path";
 import fs from "fs";
+import crypto from "crypto";
 
 declare global {
   namespace Express {
     export interface Request {
+      /**
+       * Received file. `undefined` if an error occurred.
+       */
       file: MultipartFile;
+      /**
+       * Received files.
+       */
       files: MultipartFile[];
     }
   }
@@ -26,12 +33,33 @@ export type MultipartMiddleware = (
 ) => void;
 
 export type MultipartFile = {
+  /**
+   * Full path to the persisted file.
+   */
   path: string;
+  /**
+   * Name of the file that was persisted on a disk.
+   */
   name: string;
+  /**
+   * Name of the file that was received in the form-data request.
+   */
   originalName: string;
+  /**
+   * Mime type (based on the file extension).
+   */
   mime: string;
+  /**
+   * File extension.
+   */
   extension: string;
+  /**
+   * File encoding.
+   */
   encoding: string;
+  /**
+   * Path to the storage directory.
+   */
   destination: string;
 };
 
@@ -94,6 +122,13 @@ export type MultipartOptions = {
     contentMime: string,
     binaryMime?: string
   ) => boolean;
+
+  /**
+   * The result of this function will work as a new file name persisted on a disk.
+   *
+   * *Default: random hex string*
+   */
+  fileName?: (originalName: string, mime: string) => string;
 };
 
 const defaultOptions: MultipartOptions = {
@@ -111,6 +146,10 @@ const defaultOptions: MultipartOptions = {
     _binaryMime?: string
   ) => {
     return false;
+  },
+
+  fileName: (_originalName: string, _mime: string) => {
+    return crypto.randomBytes(16).toString("hex");
   },
 };
 
@@ -212,8 +251,15 @@ const handle = (
           }
         }
 
+        const name = options.fileName
+          ? options.fileName(filename, mimetype)
+          : filename;
+
         const parts = filename.split(".");
-        const fileName = options.preserveExtensions ? filename : parts[0];
+
+        const fileName = options.preserveExtensions
+          ? name + "." + parts[1]
+          : name;
 
         var dest = path.join(options.destination!, path.basename(fileName));
         var writeStream = fs.createWriteStream(dest);
