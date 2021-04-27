@@ -14,6 +14,7 @@
     "form",
     "data"
   ],
+  "type": "module",
   "main": "lib/index",
   "repository": "https://github.com/SocketByte/express-multipart",
   "homepage": "https://socketbyte.github.io/express-multipart/",

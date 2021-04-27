@@ -1,6 +1,3 @@
-/**
- * @module
- */
 import { NextFunction, Request, Response } from "express";
 import Busboy from "busboy";
 import FileType from "file-type";
