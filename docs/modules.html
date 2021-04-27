@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>express-multipart - v1.0.0</title>
-	<meta name="description" content="Documentation for express-multipart - v1.0.0">
+	<title>express-multipart - v1.0.6</title>
+	<meta name="description" content="Documentation for express-multipart - v1.0.6">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">express-multipart - v1.0.0</a>
+					<a href="index.html" class="title">express-multipart - v1.0.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>express-multipart - v1.0.0</h1>
+			<h1>express-multipart - v1.0.6</h1>
 		</div>
 	</div>
 </header>
@@ -79,6 +79,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="modules.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#multipart" class="tsd-kind-icon">multipart</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,7 +93,7 @@
 					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>encoding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extension<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:35</li>
+							<li>Defined in types.ts:9</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -163,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>Middleware<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:29</li>
+							<li>Defined in types.ts:3</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -200,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">Multipart<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>acceptedTypes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>destination<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>fileName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>originalName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>maxFieldNameSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxFieldSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>onInvalidMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NodeJS.ReadableStream</span>, contentMime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, binaryMime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>preserveExtensions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>verifyMagic<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:66</li>
+							<li>Defined in types.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -354,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in index.ts:410</li>
+									<li>Defined in multipart.ts:109</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -363,7 +364,43 @@
 								</div>
 								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">multipart</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;express-multipart&quot;</span><span style="color: #000000">;</span>
 
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mp</span><span style="color: #000000"> = </span><span style="color: #795E26">multipart</span><span style="color: #000000">({});</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mp</span><span style="color: #000000"> = </span><span style="color: #795E26">multipart</span><span style="color: #000000">();</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="modules.html#multipartoptions" class="tsd-signature-type" data-tsd-kind="Type alias">MultipartOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Global multipart options that will be applied for all multipart requests.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="classes/multipart.html" class="tsd-signature-type" data-tsd-kind="Class">Multipart</a></h4>
+							<p>New <a href="classes/multipart.html">Multipart</a> instance with specified option parameters (if there are any).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="multipart" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> multipart</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">multipart<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="modules.html#multipartoptions" class="tsd-signature-type" data-tsd-kind="Type alias">MultipartOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/multipart.html" class="tsd-signature-type" data-tsd-kind="Class">Multipart</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in multipart.ts:109</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructor for the <a href="classes/multipart.html">Multipart</a></p>
+								</div>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">multipart</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;express-multipart&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mp</span><span style="color: #000000"> = </span><span style="color: #795E26">multipart</span><span style="color: #000000">();</span>
 </code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -406,6 +443,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#multipart" class="tsd-kind-icon">multipart</a>
 					</li>
 				</ul>
 			</nav>

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Multipart | express-multipart - v1.0.0</title>
-	<meta name="description" content="Documentation for express-multipart - v1.0.0">
+	<title>Multipart | express-multipart - v1.0.6</title>
+	<meta name="description" content="Documentation for express-multipart - v1.0.6">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">express-multipart - v1.0.0</a>
+					<a href="../index.html" class="title">express-multipart - v1.0.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">express-multipart - v1.0.0</a>
+					<a href="../modules.html">express-multipart - v1.0.6</a>
 				</li>
 				<li>
 					<a href="multipart.html">Multipart</a>
@@ -113,7 +113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in index.ts:364</li>
+									<li>Defined in multipart.ts:63</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -121,8 +121,8 @@
 									<p>Middleware used for file and text-based multipart data.
 									<em>It parses a singular file field and multiple text fields.</em></p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;upload&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">file</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;myFile&quot;</span><span style="color: #000000">), (</span><span style="color: #001080">_req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myFile</span><span style="color: #000000">: </span><span style="color: #267F99">MultipartFile</span><span style="color: #000000"> = </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #001080">locals</span><span style="color: #000000">.</span><span style="color: #001080">file</span><span style="color: #000000">;</span>
+								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;upload&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">file</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;myFile&quot;</span><span style="color: #000000">), (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myFile</span><span style="color: #000000">: </span><span style="color: #267F99">MultipartFile</span><span style="color: #000000"> = </span><span style="color: #001080">req</span><span style="color: #000000">.</span><span style="color: #001080">file</span><span style="color: #000000">;</span>
 <span style="color: #000000">})</span>
 </code></pre>
 							</div>
@@ -156,7 +156,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in index.ts:382</li>
+									<li>Defined in multipart.ts:81</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -164,8 +164,8 @@
 									<p>Middleware used for file and text-based multipart data.
 									<em>It parses multiple file fields and multiple text fields.</em></p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;upload&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">files</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;myFiles&quot;</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000">), (</span><span style="color: #001080">_req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myFiles</span><span style="color: #000000">: </span><span style="color: #267F99">MultipartFile</span><span style="color: #000000">[] = </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #001080">locals</span><span style="color: #000000">.</span><span style="color: #001080">files</span><span style="color: #000000">;</span>
+								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;upload&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">files</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;myFiles&quot;</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000">), (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myFiles</span><span style="color: #000000">: </span><span style="color: #267F99">MultipartFile</span><span style="color: #000000">[] = </span><span style="color: #001080">req</span><span style="color: #000000">.</span><span style="color: #001080">files</span><span style="color: #000000">;</span>
 <span style="color: #000000">})</span>
 </code></pre>
 							</div>
@@ -205,15 +205,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in index.ts:347</li>
+									<li>Defined in multipart.ts:46</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Middleware used for text-based multipart data. <em>It does not parse any files.</em></p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;texts&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">text</span><span style="color: #000000">(), (</span><span style="color: #001080">_req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myText</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000"> = </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #001080">locals</span><span style="color: #000000">.</span><span style="color: #001080">body</span><span style="color: #000000">.</span><span style="color: #001080">myText</span><span style="color: #000000">;</span>
+								<pre><code class="language-typescript"><span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">post</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;texts&quot;</span><span style="color: #000000">, </span><span style="color: #001080">mp</span><span style="color: #000000">.</span><span style="color: #795E26">text</span><span style="color: #000000">(), (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myText</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000"> = </span><span style="color: #001080">req</span><span style="color: #000000">.</span><span style="color: #001080">body</span><span style="color: #000000">.</span><span style="color: #001080">myText</span><span style="color: #000000">;</span>
 <span style="color: #000000">})</span>
 </code></pre>
 							</div>
@@ -272,6 +272,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../modules.html#multipart" class="tsd-kind-icon">multipart</a>
 					</li>
 				</ul>
 			</nav>
