@@ -334,8 +334,8 @@ export class Multipart {
    * Middleware used for text-based multipart data. *It does not parse any files.*
    *
    * ```typescript
-   * app.post("texts", mp.text(), (_req, res) => {
-   *   const myText: string = res.locals.body.myText;
+   * app.post("texts", mp.text(), (req, res) => {
+   *   const myText: string = req.body.myText;
    * })
    * ```
    * @param options Local multipart options merged with global options.
@@ -350,8 +350,8 @@ export class Multipart {
    * *It parses a singular file field and multiple text fields.*
    *
    * ```typescript
-   * app.post("upload", mp.file("myFile"), (_req, res) => {
-   *   const myFile: MultipartFile = res.locals.file;
+   * app.post("upload", mp.file("myFile"), (req, res) => {
+   *   const myFile: MultipartFile = req.file;
    * })
    * ```
    * @param fieldName `multipart/form-data` field name that contains a file.
@@ -367,8 +367,8 @@ export class Multipart {
    * *It parses multiple file fields and multiple text fields.*
    *
    * ```typescript
-   * app.post("upload", mp.files("myFiles", 3), (_req, res) => {
-   *   const myFiles: MultipartFile[] = res.locals.files;
+   * app.post("upload", mp.files("myFiles", 3), (req, res) => {
+   *   const myFiles: MultipartFile[] = req.files;
    * })
    * ```
    * @param fieldName `multipart/form-data` field name that contains an array of files.
@@ -398,7 +398,7 @@ export class Multipart {
  * ```typescript
  * import multipart from "express-multipart";
  *
- * const mp = multipart({});
+ * const mp = multipart();
  * ```
  *
  * @param options Global multipart options that will be applied for all multipart requests.
