@@ -16,11 +16,11 @@
   ],
   "main": "lib/index",
   "repository": "https://github.com/SocketByte/express-multipart",
-  "homepage": "https://agregorevsky.com/express-multipart",
+  "homepage": "https://socketbyte.github.io/express-multipart/",
   "author": "Adam Grzegorzewski <business@agregorevsky.com> (https://agregorevsky.com)",
   "license": "MIT",
   "scripts": {
-    "docs": "typedoc --out docs --includeVersion lib/index.ts"
+    "docs": "typedoc --out docs --readme README.md --includeVersion lib/index.ts"
   },
   "devDependencies": {
     "@types/busboy": "^0.2.3",
