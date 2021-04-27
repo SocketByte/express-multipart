@@ -1,6 +1,6 @@
 {
   "name": "express-multipart",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "High performance lightweight Express middleware for handling multipart/form-data requests",
   "keywords": [
     "express",
@@ -14,7 +14,11 @@
     "form",
     "data"
   ],
-  "main": "lib/index",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "repository": "https://github.com/SocketByte/express-multipart",
   "homepage": "https://socketbyte.github.io/express-multipart/",
   "author": "Adam Grzegorzewski <business@agregorevsky.com> (https://agregorevsky.com)",
