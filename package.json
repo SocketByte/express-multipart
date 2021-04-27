@@ -1,6 +1,6 @@
 {
   "name": "express-multipart",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "High performance lightweight Express middleware for handling multipart/form-data requests",
   "keywords": [
     "express",
@@ -14,14 +14,15 @@
     "form",
     "data"
   ],
-  "type": "module",
   "main": "lib/index",
   "repository": "https://github.com/SocketByte/express-multipart",
   "homepage": "https://socketbyte.github.io/express-multipart/",
   "author": "Adam Grzegorzewski <business@agregorevsky.com> (https://agregorevsky.com)",
   "license": "MIT",
   "scripts": {
-    "docs": "typedoc --out docs --readme README.md --includeVersion lib/index.ts"
+    "docs": "typedoc --out docs --readme README.md --includeVersion lib/index.ts",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/busboy": "^0.2.3",
